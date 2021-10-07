@@ -1,0 +1,172 @@
+#get request to login endpoint
+
+GET http://localhost:4000/api/login 
+
+###
+#post request to registerUser endpoint
+# ADMIN
+POST http://localhost:4000/api/register 
+Content-Type: application/json
+
+{
+"email":"newswriteadmin@gmail.com",
+"orgUnit":"News Management",
+"division":"Writing",
+"password":"admin123",
+"passwordCheck":"admin123"
+}
+
+###
+#post request to registerUser endpoint
+# MANAGER
+POST http://localhost:4000/api/register 
+Content-Type: application/json
+
+{
+"email":"newswritemanager@gmail.com",
+"orgUnit":"News Management",
+"division":"Writing",
+"password":"manager123",
+"passwordCheck":"manager123"
+}
+
+###
+#post request to registerUser endpoint
+# NORMAL
+POST http://localhost:4000/api/register 
+Content-Type: application/json
+
+{
+"email":"newswritenormal@gmail.com",
+"orgUnit":"News Management",
+"division":"Writing",
+"password":"normal123",
+"passwordCheck":"normal123"
+}
+
+
+###
+#get from updateUsers endpoint
+POST http://localhost:4000/api/updateUsers
+Content-Type: application/json
+
+{
+"user_id" : "615ae37dfa5fa598d19a2b4b",
+"updateUser": {"orgUnit":"Harware Reviews","division":"IT"}
+}
+
+###
+#test post requests to registerUser endpoint
+POST http://localhost:4000/api/readUsers 
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"orgUnit":"News Management",
+"division":"IT"
+}
+
+###
+#post request to login endpoint
+POST http://localhost:4000/api/login 
+Content-Type: application/json
+
+{
+"email":"admin@gmail.com",
+"password":"admin123"
+}
+
+###
+#test post requests to login endpoint
+POST http://localhost:4000/api/login 
+Content-Type: application/json
+
+{
+"email":"admin@gmail.com",
+"password":"admin123  "
+}
+
+###
+#test post requests to delete endpoint
+POST http://localhost:4000/api/delete 
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"user_id" : "615ae37dfa5fa598d19a2b4b"
+}
+
+###
+#get from createCred endpoint
+POST http://localhost:4000/api/createCredentials
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"orgUnit":"News Management",
+"division":"Writing",
+"email":"newswriteadmin@gmail.com",
+"password":"admin123",
+"website": "CoolTech"
+}
+
+###
+#get from createCred endpoint
+POST http://localhost:4000/api/createCredentials
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"orgUnit":"News Management",
+"division":"Writing",
+"email":"newswritemanager@gmail.com",
+"password":"manager123",
+"website": "CoolTech"
+}
+
+###
+#get from createCred endpoint
+POST http://localhost:4000/api/createCredentials
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"orgUnit":"News Management",
+"division":"Writing",
+"email":"newswritenormal@gmail.com",
+"password":"normal123",
+"website": "CoolTech"
+}
+
+###
+#get from readCred endpoint
+POST http://localhost:4000/api/readCredentials
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"orgUnit":"Software Reviews",
+"division":"IT"
+}
+###
+#get from updateCred endpoint
+POST http://localhost:4000/api/updateCredentials
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"user_id" : "615ad821cefe3b82a02e3e24",
+"updateCredentials": {"orgUnit":"Software Reviews","division":"Finance"}
+}
+
+
+###
+#get from deleteCred endpoint
+POST http://localhost:4000/api/deleteCredentials
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTliYTdlMjNlYmRmYjg1MTcyMDYwYSIsImlhdCI6MTYzMzM0NzIwOX0.PyzKmdbuc5sZK3C1h2hiz1A1LQZimMdTSJXNoeyq_pc
+Content-Type: application/json
+
+{
+"user_id" : "615ad469c44eda6282765b7e"
+}
+
