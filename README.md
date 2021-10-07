@@ -9,12 +9,15 @@ create config.env file in root directory
 You will need the following secret variables
 
 use port 4000 if you don't want to reconfigure all api requests.
+
 PORT=
 
 create your own mongo db connection
+
 MONGO_URI=
 
 Randomly generate a 50 character long password to use as jwt secret
+
 JWT_SECRET=
 
 type npm start to start
@@ -91,28 +94,37 @@ The existing users login information all follows the same pattern:
 ### Admin Example:
 
 Unit : Opinion Publishing
+
 Division : IT
+
 Role : Admin
 
 Email : opitadmin@gmail.com
+
 Password admin123
 
 ### Manager Example:
 
 Unit : Opinion Publishing
+
 Division : IT
+
 Role : Admin
 
 Email : opitmanager@gmail.com
+
 Password manager123
 
 ### Normal Example:
 
 Unit : Opinion Publishing
+
 Division : IT
+
 Role : Admin
 
 Email : opitnormal@gmail.com
+
 Password normal123
 
 ## The prefixes are listed below
